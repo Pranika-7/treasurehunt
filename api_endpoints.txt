@@ -1,0 +1,21 @@
+# REST API Endpoints & Sample Responses
+
+1. Register Player
+- Request: POST http://localhost:8080/api/players?name=Player1
+- Response: {"id": 1, "name": "Player1", "score": 0}
+
+2. Start Game
+- Request: POST http://localhost:8080/api/game/start
+- Response: "Game started with 10 treasures."
+
+3. Get Map
+- Request: GET http://localhost:8080/api/game/map
+- Response: [{"id": 1, "points": 50, "isCollected": false}]
+
+4. Collect Treasure
+- Request: POST http://localhost:8080/api/game/collect/1?playerId=1
+- Response: "Treasure collected successfully."
+
+5. Get Leaderboard
+- Request: GET http://localhost:8080/api/leaderboard
+- Response: [{"id": 1, "name": "Player1", "score": 50}]
